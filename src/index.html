@@ -6,7 +6,7 @@
 </head>
 
 <body>
-   
+
     <section id="main-section">
         <div id="card-container">
             <div class="name-card">
@@ -55,31 +55,90 @@
                 </ul>
             </div>
             <div>
-                <div id="job1" class="tabcontent">
+                <div id="job1" class="tab-content">
                     <h3>Softtek</h3>
+                    <h4>09/2021 - 05/2022</h4>
+                    <div>
+                        <ul>
+                            <li>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium ipsa repellendus reprehenderit 
+                            </li>
+                            <li>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium ipsa repellendus reprehenderit 
+                            </li>
+                            <li>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium ipsa repellendus reprehenderit 
+                            </li>
+                            <li>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium ipsa repellendus reprehenderit 
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div id="job2" class="tabcontent">
-                    <h3>job2.</h3>
+                <div id="job2" class="tab-content">
+                    <h3>Bosch</h3>
+                    <h4>09/2021 - 05/2022</h4>
+                    <div>
+                        <ul>
+                            <li>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium ipsa repellendus reprehenderit 
+                            </li>
+                            <li>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium ipsa repellendus reprehenderit 
+                            </li>
+                            <li>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium ipsa repellendus reprehenderit 
+                            </li>
+                            <li>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium ipsa repellendus reprehenderit 
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div id="job3" class="tabcontent">
-                    <h3>job3.</h3>
+                <div id="job3" class="tab-content">
+                    <h3>4Geeks</h3>
+                    <h4>09/2021 - 05/2022</h4>
+                    <div>
+                        <ul>
+                            <li>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium ipsa repellendus reprehenderit 
+                            </li>
+                            <li>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium ipsa repellendus reprehenderit 
+                            </li>
+                            <li>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium ipsa repellendus reprehenderit 
+                            </li>
+                            <li>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium ipsa repellendus reprehenderit 
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div id="job4" class="tabcontent">
-                    <h3>job4.</h3>
+                <div id="job4" class="tab-content">
+                    <h3>Others</h3>
+                    <h4>2012 - 2019</h4>
+                    <div>
+                       <p>
+                           Most of these years I spent working in the Workforce Management field, for a few companies...and on and on .
+                       </p>
+                    </div>
                 </div>
             </div>
         </div>
         <script>
-         
+
+            let first = document.getElementsByClassName("tab-content");
+            first[0].style.display = "block"
 
             function tabSelect(event, selection) {
                 let i, tabcontent, tablinks;
-                tabcontent = document.getElementsByClassName("tabcontent");
+                tabcontent = document.getElementsByClassName("tab-content");
                 for (i = 0; i < tabcontent.length; i++) {
                     tabcontent[i].style.display = "none"
                 }
 
-                tablinks = document.getElementsByClassName("tanlinks");
+                tablinks = document.getElementsByClassName("tablinks");
                 for (i = 0; i < tablinks.length; i++) {
                     tablinks[i].className = tablinks[i].className.replace("active", "");
                 }
