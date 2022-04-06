@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Quicksand:wght@300&display=swap");
+
+#card-container {
+    display: grid;
+    width: 100%;
+}
+
+.name-card{
+  color: white;
+  width: 65%;
+  h1{
+    font-size: 3rem;
+  }
+  h3{
+    font-size: 1.5rem;
+  }
+}
+
