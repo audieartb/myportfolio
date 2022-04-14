@@ -6,6 +6,9 @@
 </head>
 
 <body>
+    <div id="preloader">
+      
+    </div>
 
     <section id="main-section">
         <div id="card-container">
@@ -14,6 +17,7 @@
                 <h3 id="about">I’ m a software developer. I need help with this text <br> but I do have some experience
                     doing things <br> like web sites and stuff, and they work!
             </div>
+            <img id="fox-img" alt="">
         </div>
         <div class="menu-container">
             <div class="menu">
@@ -61,16 +65,20 @@
                     <div>
                         <ul>
                             <li>
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium ipsa repellendus reprehenderit 
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium ipsa repellendus
+                                reprehenderit
                             </li>
                             <li>
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium ipsa repellendus reprehenderit 
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium ipsa repellendus
+                                reprehenderit
                             </li>
                             <li>
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium ipsa repellendus reprehenderit 
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium ipsa repellendus
+                                reprehenderit
                             </li>
                             <li>
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium ipsa repellendus reprehenderit 
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium ipsa repellendus
+                                reprehenderit
                             </li>
                         </ul>
                     </div>
@@ -81,16 +89,20 @@
                     <div>
                         <ul>
                             <li>
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium ipsa repellendus reprehenderit 
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium ipsa repellendus
+                                reprehenderit
                             </li>
                             <li>
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium ipsa repellendus reprehenderit 
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium ipsa repellendus
+                                reprehenderit
                             </li>
                             <li>
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium ipsa repellendus reprehenderit 
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium ipsa repellendus
+                                reprehenderit
                             </li>
                             <li>
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium ipsa repellendus reprehenderit 
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium ipsa repellendus
+                                reprehenderit
                             </li>
                         </ul>
                     </div>
@@ -98,19 +110,24 @@
                 <div id="job3" class="tab-content">
                     <h3>4Geeks</h3>
                     <h4>09/2021 - 05/2022</h4>
+
                     <div>
                         <ul>
                             <li>
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium ipsa repellendus reprehenderit 
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium ipsa repellendus
+                                reprehenderit
                             </li>
                             <li>
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium ipsa repellendus reprehenderit 
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium ipsa repellendus
+                                reprehenderit
                             </li>
                             <li>
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium ipsa repellendus reprehenderit 
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium ipsa repellendus
+                                reprehenderit
                             </li>
                             <li>
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium ipsa repellendus reprehenderit 
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium ipsa repellendus
+                                reprehenderit
                             </li>
                         </ul>
                     </div>
@@ -119,18 +136,22 @@
                     <h3>Others</h3>
                     <h4>2012 - 2019</h4>
                     <div>
-                       <p>
-                           Most of these years I spent working in the Workforce Management field, for a few companies...and on and on .
-                       </p>
+                        <p>
+                            Most of these years I spent working in the Workforce Management field, for a few
+                            companies...and on and on .
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
         <script>
-
+            /*
+            sets the first tab as active
+            */
             let first = document.getElementsByClassName("tab-content");
             first[0].style.display = "block"
 
+            //makes visible only the option selected
             function tabSelect(event, selection) {
                 let i, tabcontent, tablinks;
                 tabcontent = document.getElementsByClassName("tab-content");
@@ -152,12 +173,14 @@
     <section>
         <div class="section-header">
             <h1>My Skills</h1>
-            <h4> Dicta excepturi, ducimus aspernatur vel magni explicabo deleniti odit praesentium voluptatem magnam sed
-                odio, aperiam cum voluptate et possimus quisquam natus autem. Necessitatibus quos, consequuntur
-                voluptatibus quo velit corporis libero.</h4>
+            <h4> Having the opportunity to work on differente proyects helped me get familiar with multiple technologies
+                and the process of investigating, learning and applying them.</h4>
+        </div>
+        <div id="skills-container">
+            <img src="./assets/fox-card.png" alt="">
         </div>
     </section>
-    <section>
+    <section id="skill-section">
         <div class="section-header">
             <h1>Things I've Built</h1>
             <h4>
@@ -166,7 +189,11 @@
                 quidem perferendis quas!
             </h4>
         </div>
-
+        <div>
+            <div id="projects-container">
+                
+            </div>
+        </div>
     </section>
     <section>
         <div class="section-header">
@@ -179,7 +206,7 @@
         </div>
 
     </section>
-    <script src="./bundle.js"></script>
+
 </body>
 
 </html>
