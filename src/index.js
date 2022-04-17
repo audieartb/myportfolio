@@ -11,7 +11,7 @@ first[1].style.display = " active"
 var loader = document.getElementById('preloader');
 window.addEventListener("load", function () {
     loader.style.display = "none";
-   
+
 })
 
 const skills = [
@@ -67,9 +67,7 @@ const skills = [
 
 
 let skillContainer = document.getElementById("skills-container");
-//var progressBar = $('div#progress-bar-snippet').html()
-//let dummy = $.parseHTML(progressBar)
-//console.log(dummy)
+
 
 function addSkills() {
 
@@ -103,18 +101,54 @@ function addSkills() {
     });
 }
 
-function updateProgressBar() {
+var tablinkCss = {
+    transform: 'translateX(0)',
+    
+}
 
-    $('.progress-bar-slot').each(function () {
-        let progress = $(this).find('.progress-pct').text();
-        let random = Math.floor(Math.random() * (800 - 400) + 400)
-        $(this).find('.progress-fill').animate({ 'width': progress }, random)
+function updateProgressBar(entries, observer) {
 
+
+    entries.forEach((entry) => {
+        if (entry.isIntersecting && (entry.target.id == 'skills-container')) {
+            $('.progress-bar-slot').each(function () {
+                let progress = $(this).find('.progress-pct').text();
+                let random = Math.floor(Math.random() * (800 - 400) + 400)
+                $(this).find('.progress-fill').animate({ 'width': progress }, random)
+
+            })
+        } else if (entry.isIntersecting && (entry.target.id == 'tab-options')) {
+           
+            $('#tab-options .tablink-btn').each(function (index) {
+
+                $(this).addClass('tablink-btn-animation')
+                $(this).css({'display' :'block', '--order': index})
+           
+            })
+
+        }
     })
 }
 
+
+const skillsContainer = document.getElementById('skills-container');
+
+const tabOptions = document.getElementById('tab-options');
+
+let observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.8
+}
+
+let observer = new IntersectionObserver(updateProgressBar, observerOptions)
+
+observer.observe(skillsContainer)
+observer.observe(tabOptions)
+
 addSkills();
-updateProgressBar();
+
+
 function generateProject(id) {
     let newPr = Object.create({})
     newPr.id = id;
@@ -135,7 +169,7 @@ function projectsSetUp() {
     for (let i = 0; i < 5; i++) {
         projects.push(generateProject(i))
     }
-    
+
     projects.forEach((project, index) => {
 
         let newCard = $.parseHTML(projectCardHtml);
@@ -143,24 +177,23 @@ function projectsSetUp() {
         let descNode = document.createTextNode(project.desc);
         let gitNode = document.createTextNode(project.git);
 
-        for(let i = 0; i < project.tech.length; i++){
+        for (let i = 0; i < project.tech.length; i++) {
             let techItem = document.createTextNode(project.tech[i]);
             let techSpan = document.createElement('div')
             techSpan.appendChild(techItem)
-            
+
             $(newCard).find('.project-tech').append(techSpan)
         }
 
         $(newCard).find('.project-title').append(titleNode)
         $(newCard).find('.project-desc').append(descNode)
         $(newCard).find('.project-git').append(gitNode)
-        $(newCard).find('#card-img').src = './assets/fox-card.png'
 
         $('#projects-container').append(newCard)
-        
+
     })
 
-  
+
 
 }
 

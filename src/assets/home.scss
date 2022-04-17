@@ -7,7 +7,7 @@ body {
   font-family: "Quicksand", sans-serif;
 }
 
-#preloader{
+#preloader {
   background: #212f53 url(./Loader.gif) no-repeat center center;
   background-size: 15%;
   height: 100vh;
@@ -24,12 +24,10 @@ section {
   height: 100vh;
   box-sizing: border-box;
 }
-#skill-section{
+#skill-section {
   padding: 5%;
   height: fit-content;
 }
-
-
 
 header {
   min-height: 100px;
@@ -42,7 +40,7 @@ header {
 .section-header {
   color: white;
   max-width: 50%;
-margin-bottom: 3rem;
+  margin-bottom: 3rem;
   h1 {
     font-size: 2rem;
   }
@@ -95,19 +93,37 @@ margin-bottom: 3rem;
 }
 
 .tablink-btn {
-  
   background-color: transparent;
   width: 100%;
   border-width: 0 0 2px 0;
   margin: 0.5rem 0 0 0;
   padding-bottom: 2px;
+  color: white;
+  display: none;
 
   &:hover {
     border-color: #a8b6d8;
   }
 
-  &.active{
-      border-color: #a8b6d8;
+  &.active {
+    border-color: #a8b6d8;
+  }
+}
+
+.tablink-btn-animation{
+  animation: animate-tablink 1s ease;
+  animation-delay: calc(var(--order)*100ms);
+}
+
+@keyframes animate-tablink {
+  from{
+    transform: translateX(-25%);
+    opacity: 0;
+
+  }
+  to{
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 
