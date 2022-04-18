@@ -7,7 +7,7 @@
 
 <body>
     <div id="preloader">
-      
+
     </div>
 
     <section id="main-section">
@@ -44,131 +44,12 @@
                 building websites to exploring cloud technologies and automation.
             </h4>
         </div>
-        <div id="exp-table">
+        <div id="exp-tabs">
             <div class="tabs">
-                <ul id="tab-options">
-                    <li>
-                        <button class="tablinks tablink-btn " onclick="tabSelect(event, 'job1')">Softtek</button>
-
-                    </li>
-                    <li> <button class="tablinks tablink-btn " onclick="tabSelect(event, 'job2')">Bosch</button>
-                    </li>
-                    <li> <button class="tablinks tablink-btn" onclick="tabSelect(event, 'job3')">4Geeks</button>
-                    </li>
-                    <li><button class="tablinks tablink-btn" onclick="tabSelect(event, 'job4')">Others</button></li>
-                </ul>
+                <ul id="exp-tab-options"></ul>
             </div>
-            <div>
-                <div id="job1" class="tab-content">
-                    <h3>Softtek</h3>
-                    <h4>09/2021 - 05/2022</h4>
-                    <div>
-                        <ul>
-                            <li>
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium ipsa repellendus
-                                reprehenderit
-                            </li>
-                            <li>
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium ipsa repellendus
-                                reprehenderit
-                            </li>
-                            <li>
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium ipsa repellendus
-                                reprehenderit
-                            </li>
-                            <li>
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium ipsa repellendus
-                                reprehenderit
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div id="job2" class="tab-content">
-                    <h3>Bosch</h3>
-                    <h4>09/2021 - 05/2022</h4>
-                    <div>
-                        <ul>
-                            <li>
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium ipsa repellendus
-                                reprehenderit
-                            </li>
-                            <li>
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium ipsa repellendus
-                                reprehenderit
-                            </li>
-                            <li>
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium ipsa repellendus
-                                reprehenderit
-                            </li>
-                            <li>
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium ipsa repellendus
-                                reprehenderit
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div id="job3" class="tab-content">
-                    <h3>4Geeks</h3>
-                    <h4>09/2021 - 05/2022</h4>
-
-                    <div>
-                        <ul>
-                            <li>
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium ipsa repellendus
-                                reprehenderit
-                            </li>
-                            <li>
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium ipsa repellendus
-                                reprehenderit
-                            </li>
-                            <li>
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium ipsa repellendus
-                                reprehenderit
-                            </li>
-                            <li>
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium ipsa repellendus
-                                reprehenderit
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div id="job4" class="tab-content">
-                    <h3>Others</h3>
-                    <h4>2012 - 2019</h4>
-                    <div>
-                        <p>
-                            Most of these years I spent working in the Workforce Management field, for a few
-                            companies...and on and on .
-                        </p>
-                    </div>
-                </div>
-            </div>
+            <div id="exp-tabs-container"></div>
         </div>
-        <script>
-            /*
-            sets the first tab as active
-            */
-            let first = document.getElementsByClassName("tab-content");
-            first[0].style.display = "block"
-
-            //makes visible only the option selected
-            function tabSelect(event, selection) {
-                let i, tabcontent, tablinks;
-                tabcontent = document.getElementsByClassName("tab-content");
-                for (i = 0; i < tabcontent.length; i++) {
-                    tabcontent[i].style.display = "none"
-                }
-
-                tablinks = document.getElementsByClassName("tablinks");
-                for (i = 0; i < tablinks.length; i++) {
-                    tablinks[i].className = tablinks[i].className.replace("active", "");
-                }
-
-                document.getElementById(selection).style.display = "block";
-                event.currentTarget.className += " active";
-            }
-
-        </script>
     </section>
     <section>
         <div class="section-header">
@@ -177,10 +58,10 @@
                 and the process of investigating, learning and applying them.</h4>
         </div>
         <div id="skills-container">
-            <img src="./assets/fox-card.png" alt="">
+
         </div>
     </section>
-    <section id="skill-section">
+    <section id="projects-section">
         <div class="section-header">
             <h1>Things I've Built</h1>
             <h4>
@@ -189,10 +70,12 @@
                 quidem perferendis quas!
             </h4>
         </div>
-        <div>
-            <div id="projects-container">
-                
+        <div id="pr-tabs">
+            <div class="tabs">
+                <ul id="pr-tab-options"></ul>
             </div>
+            <div id="pr-tabs-container"></div>
+
         </div>
     </section>
     <section>

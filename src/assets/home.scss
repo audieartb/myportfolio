@@ -24,6 +24,8 @@ section {
   height: 100vh;
   box-sizing: border-box;
 }
+
+
 #skill-section {
   padding: 5%;
   height: fit-content;
@@ -79,61 +81,3 @@ header {
   }
 }
 
-#exp-table {
-  display: grid;
-  grid-template-columns: 2fr 8fr;
-  min-height: 300px;
-  max-width: 950px;
-  color: white;
-}
-.tabs {
-  ul {
-    list-style-type: none;
-  }
-}
-
-.tablink-btn {
-  background-color: transparent;
-  width: 100%;
-  border-width: 0 0 2px 0;
-  margin: 0.5rem 0 0 0;
-  padding-bottom: 2px;
-  color: white;
-  display: none;
-
-  &:hover {
-    border-color: #a8b6d8;
-  }
-
-  &.active {
-    border-color: #a8b6d8;
-  }
-}
-
-.tablink-btn-animation{
-  animation: animate-tablink 1s ease;
-  animation-delay: calc(var(--order)*100ms);
-}
-
-@keyframes animate-tablink {
-  from{
-    transform: translateX(-25%);
-    opacity: 0;
-
-  }
-  to{
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-.tab-content {
-  border: solid;
-  border-color: #b65656;
-  border-radius: 15px;
-  width: 100%;
-  height: 100%;
-  display: none;
-
-  padding: 1rem;
-}
