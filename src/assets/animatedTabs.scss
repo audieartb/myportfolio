@@ -8,10 +8,11 @@
   color: white;
   padding: 1rem;
 }
+
 .tabs {
   ul {
-    list-style-type: none;
-    li{
+    list-style-type: square;
+    li {
       display: flex;
       justify-content: flex-end;
     }
@@ -20,14 +21,13 @@
 
 .tablink-btn {
   background-color: transparent;
-  width: 70%;
+  width: 80%;
   border-width: 0 0 2px 0;
   margin: 0.5rem 0 0 0;
   padding-bottom: 2px;
   color: white;
   display: none;
   justify-self: end;
-  justify-content: center;
   padding-right: 1rem;
   &:hover {
     border-color: #a8b6d8;
@@ -38,8 +38,9 @@
     border-color: #a8b6d8;
   }
 
-  img{
+  img {
     margin-right: 1.5rem;
+    align-self: flex-start;
   }
 }
 

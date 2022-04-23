@@ -1,9 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato&family=Quicksand:wght@300&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Lato&family=Press+Start+2P&family=Quicksand:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Press+Start+2P&family=Quicksand:wght@300&display=swap");
 
-
-html{
+html {
   scroll-behavior: smooth;
 }
 
@@ -14,7 +13,7 @@ body {
   font-family: "Quicksand", sans-serif;
   font-size: 15px;
 }
-a{
+a {
   color: inherit;
   text-decoration: inherit;
 }
@@ -31,16 +30,15 @@ section {
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: 5%;
+  padding: 3% 8% 3% 5%;
   height: 100vh;
   box-sizing: border-box;
-  margin: 0 0 3rem 0
+  margin: 0 0 3rem 0;
 }
 
-
-#skill-section {
+#skills-section {
   padding: 5%;
-  height: fit-content;
+  height: max-content;
 }
 
 header {
@@ -49,18 +47,31 @@ header {
   top: 0;
   background: rgb(221, 255, 0);
   z-index: 999;
+  
 }
 
 .section-header {
   color: white;
   width: clamp(500px, 50%, 600px);
   max-height: 35%;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   h1 {
     font-size: 2rem;
   }
   h4 {
     font-size: 1.25rem;
+  }
+}
+
+
+.section-header.right {
+  align-self: flex-end;
+  margin-right: 5%;
+  h1 {
+    text-align: right;
+  }
+  h4 {
+    text-align: right;
   }
 }
 
@@ -93,4 +104,3 @@ header {
     cursor: pointer;
   }
 }
-

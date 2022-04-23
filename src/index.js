@@ -22,12 +22,22 @@ function setUpExperience() {
     let btnClasses = 'tablinks tablink-btn'
     let tabContentClasses = 'tab-content'
     experienceData.forEach(async (item, index) => {
-        let desc = item.description.replace(/(?:\r\n|\r|\n)/g, '<br>');
-
-        $('#exp-tab-options').append(` <li><button id="exp-${index}" class="${btnClasses}"> <img src=${tabIcon} /> ${item.company}</button></li>`);
+        //let desc = item.description.replace(/(?:\r\n|\r|\n)/g, '<br>');
+       
+        $('#exp-tab-options').append(`<li><button id="exp-${index}" class="${btnClasses}"> <img src=${tabIcon} /> ${item.company}</button></li>`);
 
         $('#exp-tabs-container').append(`<div id="exp-content-${index}" class="${tabContentClasses}"><h3>${item.company}</h3>
-        <h4>${item.start} - ${item.end}</h4><div> <p>${desc}</p> </div></div>`);
+        <h4>${item.start} - ${item.end}</h4><div><ul id="ul-${index}"</ul></div></div>`);
+       
+        let items = item.description.split('\n')
+        console.log(items)
+        items.forEach(el =>{
+            let txt = document.createTextNode(el)
+            let li = document.createElement('li')
+            li.appendChild(txt)
+            document.getElementById(`ul-${index}`).appendChild(li)
+        })  
+
     });
 
 
@@ -152,10 +162,8 @@ function generateProject(id) {
 
 function setUpProjects() {
 
-    let projects = [];
-    for (let i = 0; i < 5; i++) {
-        projects.push(generateProject(i))
-    }
+    let projects = data.projects;
+   
 
     let btnClasses = 'tablinks tablink-btn'
     let tabContentClasses = 'tab-content'
@@ -164,7 +172,7 @@ function setUpProjects() {
 
         $('#pr-tab-options').append(`<li><button id="pr-${index}" class="${btnClasses}"><img src=${tabIcon} /> ${item.name}</button></li>`);
 
-        $('#pr-tabs-container').append(`<div id="pr-content-${index}" class="${tabContentClasses}"><div><h3>${item.name}</h3></div><div><p>${item.desc}</p></div><div id="tech-card-${index}" class="tech-footer"></div></div>`);
+        $('#pr-tabs-container').append(`<div id="pr-content-${index}" class="${tabContentClasses}"><div class="project-title"><h3>${item.name}</h3></div><div><p>${item.desc}</p></div><div id="tech-card-${index}" class="tech-footer"></div></div>`);
 
         let ul = document.createElement('ul')
         ul.setAttribute('class', 'tech-list')
