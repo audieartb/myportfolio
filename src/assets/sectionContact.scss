@@ -1,0 +1,47 @@
+@import './variables.scss';
+
+#contact-content{
+    display: grid;
+    place-items: center;
+    height: 50%;
+    width: 100%;
+}
+
+
+#form-container{
+    border: solid;
+    border-color: $border-red;
+    border-radius: 15px;
+    background-color: white;
+    height: 350px;
+    width: 325px;
+}
+
+#form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    .field{
+        width: 100%;
+        margin: 1rem;
+        
+    }
+
+ 
+    button{
+        background-color: #a8b6d8;
+        &:focus{
+            background-color: red;
+        }
+    }
+
+   
+
+}
+#contact-img{
+    height:30%
+}
+
+input:focus{
+    background-color: adjust-hue($color: #b62424, $degrees: 0);
+}

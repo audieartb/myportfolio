@@ -1,60 +1,97 @@
-#exp-tabs, #pr-tabs {
-    display: grid;
-    grid-template-columns: 2fr 8fr;
-    min-height: 300px;
-    max-width: 950px;
-    color: white;
-  }
-  .tabs {
-    ul {
-      list-style-type: none;
+#exp-tabs,
+#pr-tabs {
+  display: grid;
+  grid-template-columns: 2fr 8fr;
+  max-width: 1200px;
+  height: 400px;
+  overflow: hidden;
+  color: white;
+  padding: 1rem;
+}
+.tabs {
+  ul {
+    list-style-type: none;
+    li{
+      display: flex;
+      justify-content: flex-end;
     }
   }
-  
-  .tablink-btn {
-    background-color: transparent;
-    width: 100%;
-    border-width: 0 0 2px 0;
-    margin: 0.5rem 0 0 0;
-    padding-bottom: 2px;
-    color: white;
-    display: none;
-  
-    &:hover {
-      border-color: #a8b6d8;
-      cursor: pointer;
-    }
-  
-    &.active {
-      border-color: #a8b6d8;
-    }
+}
+
+.tablink-btn {
+  background-color: transparent;
+  width: 70%;
+  border-width: 0 0 2px 0;
+  margin: 0.5rem 0 0 0;
+  padding-bottom: 2px;
+  color: white;
+  display: none;
+  justify-self: end;
+  justify-content: center;
+  padding-right: 1rem;
+  &:hover {
+    border-color: #a8b6d8;
+    cursor: pointer;
   }
-  
-  .tablink-btn-animation{
-    animation: animate-tablink 1s ease;
-    animation-delay: calc(var(--order)*100ms);
+
+  &.active {
+    border-color: #a8b6d8;
   }
-  
-  @keyframes animate-tablink {
-    from{
-      transform: translateX(-25%);
-      opacity: 0;
-  
-    }
-    to{
-      transform: translateX(0);
-      opacity: 1;
-    }
+
+  img{
+    margin-right: 1.5rem;
   }
-  
-  .tab-content {
-    border: solid;
-    border-color: #b65656;
-    border-radius: 15px;
-    width: 100%;
-    height: 100%;
-    display: none;
-  
-    padding: 1rem;
+}
+
+.tablink-btn-animation {
+  animation: animate-tablink 1s ease;
+  animation-delay: calc(var(--order) * 100ms);
+}
+
+@keyframes animate-tablink {
+  from {
+    transform: translateX(-25%);
+    opacity: 0;
   }
-  
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.tab-content {
+  height: 100%;
+  width: 100%;
+  border: solid;
+  border-color: #b65656;
+  border-radius: 15px;
+  display: none;
+  padding: 1rem;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  opacity: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.show-tab {
+  display: flex !important;
+  opacity: 0;
+}
+
+//projects styles
+.tech-footer {
+  align-self: flex-end;
+  width: 100%;
+  max-height: 20%;
+}
+.tech-list {
+  list-style-type: none;
+  color: #a8b6d8;
+
+  li {
+    float: right;
+    margin: 2px 5px 2px 2px;
+  }
+}

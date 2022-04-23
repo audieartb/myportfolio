@@ -1,0 +1,24 @@
+<svg width="19" height="16" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="4.67146" y="3.53554" width="4" height="4" transform="rotate(-45 4.67146 3.53554)" fill="#B65656" stroke="url(#paint0_angular_48_121)"/>
+<rect x="11.7071" y="4.53554" width="4" height="4" transform="rotate(-45 11.7071 4.53554)" fill="#B65656" stroke="url(#paint1_angular_48_121)"/>
+<rect x="7.70711" y="8.53554" width="4" height="4" transform="rotate(-45 7.70711 8.53554)" fill="#B65656" stroke="url(#paint2_angular_48_121)"/>
+<rect x="0.707107" y="7.57106" width="4" height="4" transform="rotate(-45 0.707107 7.57106)" fill="#B65656" stroke="url(#paint3_angular_48_121)"/>
+<defs>
+<radialGradient id="paint0_angular_48_121" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(6.46436 6.03554) rotate(90) scale(2.5)">
+<stop stop-color="#7C6464"/>
+<stop offset="1" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="paint1_angular_48_121" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(13.5 7.03554) rotate(90) scale(2.5)">
+<stop stop-color="#7C6464"/>
+<stop offset="1" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="paint2_angular_48_121" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(9.5 11.0355) rotate(90) scale(2.5)">
+<stop stop-color="#7C6464"/>
+<stop offset="1" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="paint3_angular_48_121" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(2.5 10.0711) rotate(90) scale(2.5)">
+<stop stop-color="#7C6464"/>
+<stop offset="1" stop-opacity="0"/>
+</radialGradient>
+</defs>
+</svg>

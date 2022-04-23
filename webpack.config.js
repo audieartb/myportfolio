@@ -13,15 +13,24 @@ module.exports = {
   },
   module: {
     rules: [
+     
       {
         test: /\.(scss|css)$/,
         use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
-        test: /\.(jpg|png|gif)$/,
+        test: /\.(jpg|png|gif|svg)$/,
         type: 'asset/resource'
       },
+      {
+        test: /\.(js)$/,
+        exclude: /node_modules/,
+        use: ['babel-loader']
+      },
     ]
+  },
+  resolve: {
+    extensions: ['*', '.js']
   },
   plugins: [
     new HtmlWebpackPlugin({

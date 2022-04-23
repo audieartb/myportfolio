@@ -1,14 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato&family=Quicksand:wght@300&display=swap");
 
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Press+Start+2P&family=Quicksand:wght@300&display=swap');
+
+
+html{
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #212f53;
   margin: 0;
-  font-family: "Lato", sans-serif;
+  //font-family: "Lato", sans-serif;
   font-family: "Quicksand", sans-serif;
+  font-size: 15px;
 }
-
+a{
+  color: inherit;
+  text-decoration: inherit;
+}
 #preloader {
-  background: #212f53 url(./Loader.gif) no-repeat center center;
+  background: #212f53 url(./img/Loader.gif) no-repeat center center;
   background-size: 15%;
   height: 100vh;
   width: 100%;
@@ -23,6 +34,7 @@ section {
   padding: 5%;
   height: 100vh;
   box-sizing: border-box;
+  margin: 0 0 3rem 0
 }
 
 
@@ -41,8 +53,9 @@ header {
 
 .section-header {
   color: white;
-  max-width: 50%;
-  margin-bottom: 3rem;
+  width: clamp(500px, 50%, 600px);
+  max-height: 35%;
+  margin-bottom: 2rem;
   h1 {
     font-size: 2rem;
   }
