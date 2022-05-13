@@ -1,24 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato&family=Quicksand:wght@300&display=swap");
 
 @import url("https://fonts.googleapis.com/css2?family=Lato&family=Press+Start+2P&family=Quicksand:wght@300&display=swap");
+@import "./variables.scss";
 
 html {
   scroll-behavior: smooth;
 }
 
-body {
-  background-color: #212f53;
-  margin: 0;
-  //font-family: "Lato", sans-serif;
-  font-family: "Quicksand", sans-serif;
-  font-size: 15px;
-}
-a {
-  color: inherit;
-  text-decoration: inherit;
-}
+
 #preloader {
-  background: #212f53 url(./img/Loader.gif) no-repeat center center;
+  background: $bgk-primary url(./img/Loader.gif) no-repeat center center;
   background-size: 15%;
   height: 100vh;
   width: 100%;
@@ -26,20 +17,44 @@ a {
   z-index: 999;
 }
 
+
+body {
+  background-color: $bkg-dark;
+  margin: 0;
+  //font-family: "Lato", sans-serif;
+  font-family: "Quicksand", sans-serif;
+  font-size: 15px;
+}
+.container{
+  scroll-snap-type: y mandatory;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
 section {
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: 3% 8% 3% 5%;
-  height: 100vh;
+  padding: 0 8% 0 8%;
+  min-height: 100vh;
   box-sizing: border-box;
   margin: 0 0 3rem 0;
+  scroll-snap-align: start;
+  box-sizing: border-box;
+  justify-content: center;
+  scroll-margin: -1.5rem;
 }
 
 #skills-section {
-  padding: 5%;
-  height: max-content;
+  //height: max-content;
 }
+
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
 
 header {
   min-height: 100px;
@@ -47,7 +62,6 @@ header {
   top: 0;
   background: rgb(221, 255, 0);
   z-index: 999;
-  
 }
 
 .section-header {
@@ -55,29 +69,33 @@ header {
   width: clamp(500px, 50%, 600px);
   max-height: 35%;
   margin-bottom: 3rem;
+  padding: 0 1rem 0 1rem;
+
   h1 {
-    font-size: 2rem;
+    font-size: 3rem;
   }
   h4 {
     font-size: 1.25rem;
+    color: $text-gray;
   }
 }
-
 
 .section-header.right {
   align-self: flex-end;
   margin-right: 5%;
   h1 {
-    text-align: right;
+    text-align: left;
   }
   h4 {
-    text-align: right;
+    text-align: left;
+    color: $text-gray;
   }
 }
 
 .menu-container {
-  display: grid;
-  place-items: center;
+  display: flex;
+  justify-content: center;
+  
 }
 
 .menu {
@@ -90,17 +108,50 @@ header {
 }
 .menu-opt {
   min-height: 2.5rem;
-  border: #b65656;
+  border: $border-red;
   border-style: solid;
   border-width: 3px;
-  border-radius: 15px;
+  //border-radius: 15px;
   grid-column: 1 / span 1;
   display: grid;
   place-items: center;
   margin: 0.5rem 0 0.5rem 0;
 
   &:hover {
-    border-color: #a8b6d8;
+    border-color: $border-highlight;
     cursor: pointer;
   }
+}
+
+#fixed-menu {
+  position: fixed;
+  top: 0;
+  height: fit-content;
+  padding: 1rem 0.5rem 0.5rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  border-width: 0 2px 2px 2px;
+  border-color: $border-red;
+  border-style: solid;
+  margin-left: 0.5rem;
+}
+
+.icon {
+  width: 2.3rem;
+  height: 2.3rem;
+}
+
+#opt-links {
+  display: flex;
+  flex-direction: column;
+  //transition: gap 0.5s ease;
+  gap: 0.3rem;
+}
+
+
+#cap-icon{
+  display: none;
+  transition: ease-in 250ms;
+  
 }

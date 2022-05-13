@@ -9,15 +9,16 @@
     row-gap: 10px;
     color: white;
     margin-left: 2rem;
+    align-items: center;
 }
 
 
 .skill-item{
     width: clamp(500px, 50%, 600px);
-    
+    height: 2.5em;
     .skill-title{
         font-weight: 500;
-        font-size: 1.2rem;
+        font-size: 1em;
         margin-right: 1rem;
         }
 
@@ -34,10 +35,10 @@
 .progress-bar{
     position: relative;
     width: 80%;
-    height: 20px;
+    height: 1.2em;
     margin-top: 5px;
     border-radius: 15px;
-    background-color: white;
+    background-color: $bgk-components-dark;
     overflow: hidden;
     display: inline-block;
     flex-direction: row;

@@ -17,7 +17,7 @@ export const skills = [
         pct: 60,
     },
     {
-        skill: "Javascript(VueJs, Angular)",
+        skill: "Javascript(Vanilla, VueJs, Angular)",
         exp: 1,
         pct: 80,
     },

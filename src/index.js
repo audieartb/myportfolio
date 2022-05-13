@@ -1,17 +1,24 @@
 import './assets/styles.scss';
 import "regenerator-runtime/runtime.js";
 const $ = require('jquery');
-const tabIcon = require('./assets/img/icon-tab.svg')
-const data = require('./data/db.js')
+const tabIcon = require('./assets/img/icon_tab.svg');
+const data = require('./data/db.js');
 
+
+const linkedinIcon = require("./assets/img/linkedin_red.png");
+const githubIcon = require("./assets/img/github_red.png");
+const mailIcon = require("./assets/img/mail_red.png");
+const arrowIcon = require("./assets/img/arrow_top_red.png");
+const capIcon = require("./assets/img/A_red.png");
+const profile =  require("./assets/img/edited.png");
 
 var loader = document.getElementById('preloader');
 window.addEventListener("load", function () {
     loader.style.display = "none";
 
-})
+});
 
-const skills = data.skills
+const skills = data.skills;
 
 /****************************EXPERIENCE**********************************************/
 
@@ -30,7 +37,7 @@ function setUpExperience() {
         <h4>${item.start} - ${item.end}</h4><div><ul id="ul-${index}"</ul></div></div>`);
        
         let items = item.description.split('\n')
-        console.log(items)
+   
         items.forEach(el =>{
             let txt = document.createTextNode(el)
             let li = document.createElement('li')
@@ -39,9 +46,6 @@ function setUpExperience() {
         })  
 
     });
-
-
-
 }
 
 setUpExperience()
@@ -53,22 +57,6 @@ $(function () {
     $('.tablinks').on("click", function (event) {
 
         let id = this.getAttribute("id").split("-");
-        //     let i, tablinks;
-
-        //     $(`#${id[0]}-tabs-container .tab-content`).each(function(index){
-        //         if(this.style.display == 'flex'){
-        //            this.style.display ='none'
-        //         }          
-        //     });
-
-        //     tablinks = document.getElementsByClassName("tablinks");
-        //     for (i = 0; i < tablinks.length; i++) {
-        //         tablinks[i].className = tablinks[i].className.replace(" active", "");
-        //     };
-
-        //     document.getElementById(`${id[0]}-content-${id[1]}`).style.display = "flex";
-        //     event.currentTarget.className += " active";
-
         let prevTab = $(`#${id[0]}-tabs-container .tab-content.show-tab`)
         let nextTab = $(`#${id[0]}-content-${id[1]}`)
 
@@ -82,11 +70,20 @@ $(function () {
                 //     nextTab.addClass('show-tab')
                 // })
 
-                prevTab.animate({ opacity: 0 }, 200, function () {
-                    prevTab.removeClass('show-tab')
-                });
-                nextTab.delay(500).addClass('show-tab')
+                
+
+                // prevTab.animate({ opacity: 0 }, 200, function () {
+                //     prevTab.removeClass('show-tab')
+                // });
+                // nextTab.delay(500).addClass('show-tab')
+                // nextTab.animate({ opacity: 1 }, 600)
+
+
+                prevTab.removeClass('show-tab')
+                prevTab.css({opacity: 0})
+                nextTab.addClass('show-tab')
                 nextTab.animate({ opacity: 1 }, 600)
+
             } catch (error) {
                 console.log(error)
             }
@@ -100,12 +97,31 @@ $(function () {
  sets the first tab as active
 */
 $(() => {
-
     $('#exp-tabs-container .tab-content').first().addClass("show-tab").css({ opacity: 1 })
     $('#pr-tabs-container .tab-content').first().addClass("show-tab").css({ opacity: 1 })
 })
 
+/**
+ * sets icons for the fixed menu
+ */
+$(()=>{
+    $('#cap-icon a img').attr({src: capIcon});
+    $('#linkedin-icon a img').attr({src: linkedinIcon});
+    $('#mail-icon a img').attr({src: mailIcon});
+    $('#github-icon a img').attr({src: githubIcon})
+    $('#top-icon a img').attr({src: arrowIcon})
+   // $('#profile-photo img' ).attr({src: profile})
+})
 
+/* Scroll animation for fixed links*/
+var isScrolling;
+window.addEventListener('scroll', function(e){
+    $("#opt-links").css({"gap": "0.5rem"})
+    this.window.clearTimeout(isScrolling)
+    isScrolling = this.setTimeout(function(){
+        $("#opt-links").animate({"gap": "0.3rem"})
+    }, 300)
+}, false)
 
 /************************************SKILLS*************************************/
 let skillContainer = document.getElementById("skills-container");
@@ -213,7 +229,6 @@ function updateProgressBar(entries, observer) {
 
             })
         } else if (!entry.isIntersecting && (entry.target.id == 'skills-container')) {
-            console.log('.')
             $('.progress-bar-slot').each(function () {
                 $(this).find('.progress-fill').animate({ 'width': 0 }, 200)
             })
@@ -224,7 +239,7 @@ function updateProgressBar(entries, observer) {
             $('#exp-tab-options .tablink-btn').each(function (index) {
 
                 $(this).addClass('tablink-btn-animation')
-                $(this).css({ 'display': 'block', '--order': index })
+                $(this).css({ 'display': 'flex', '--order': index })
 
             })
         }
