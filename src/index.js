@@ -62,22 +62,6 @@ $(function () {
 
         if (!nextTab.hasClass("show-tab")) {
             try {
-                // prevTab.fadeOut(400, function () {
-                //     prevTab.delay().removeClass("show-tab");
-                //     prevTab.css({opacity: 0})
-                // });
-                // nextTab.delay(400).fadeIn(200, function () {
-                //     nextTab.addClass('show-tab')
-                // })
-
-                
-
-                // prevTab.animate({ opacity: 0 }, 200, function () {
-                //     prevTab.removeClass('show-tab')
-                // });
-                // nextTab.delay(500).addClass('show-tab')
-                // nextTab.animate({ opacity: 1 }, 600)
-
 
                 prevTab.removeClass('show-tab')
                 prevTab.css({opacity: 0})
@@ -85,7 +69,7 @@ $(function () {
                 nextTab.animate({ opacity: 1 }, 600)
 
             } catch (error) {
-                console.log(error)
+                //console.log(error)
             }
         }
         return false;
@@ -119,7 +103,7 @@ window.addEventListener('scroll', function(e){
     $("#opt-links").css({"gap": "0.5rem"})
     this.window.clearTimeout(isScrolling)
     isScrolling = this.setTimeout(function(){
-        $("#opt-links").animate({"gap": "0.3rem"})
+        $("#opt-links").css({"gap": "0.3rem"})
     }, 300)
 }, false)
 
