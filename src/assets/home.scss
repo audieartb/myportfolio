@@ -27,8 +27,8 @@ body {
 }
 .container{
   scroll-snap-type: y mandatory;
-  height: 100vh;
-  overflow-y: scroll;
+  //height: 100vh;
+ // overflow-y: scroll;
 }
 
 section {
@@ -145,13 +145,13 @@ header {
 #opt-links {
   display: flex;
   flex-direction: column;
-  transition: gap 0.2s ease all;
-  gap: 0.3rem;
+  //transition: gap 0.5s ease all;
+  //gap: 0.3rem;
 }
 
 
 #cap-icon{
-  display: none;
+  display: block;
   transition: ease-in 250ms;
   
 }

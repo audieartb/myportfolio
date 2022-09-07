@@ -3,6 +3,7 @@ import "regenerator-runtime/runtime.js";
 const $ = require('jquery');
 const tabIcon = require('./assets/img/icon_tab.svg');
 const data = require('./data/db.js');
+const _ = require("lodash");
 
 
 const linkedinIcon = require("./assets/img/linkedin_red.png");
@@ -98,14 +99,26 @@ $(()=>{
 })
 
 /* Scroll animation for fixed links*/
-var isScrolling;
-window.addEventListener('scroll', function(e){
-    $("#opt-links").css({"gap": "0.5rem"})
-    this.window.clearTimeout(isScrolling)
-    isScrolling = this.setTimeout(function(){
-        $("#opt-links").css({"gap": "0.3rem"})
-    }, 300)
-}, false)
+
+$(window).scroll(_.debounce(function(){
+    $("#opt-links div").animate({"margin-top": "0.5rem"}, 200);
+}, 200, { 'leading': true, 'trailing': false }));
+
+$(window).scroll(_.debounce(function(){
+    $("#opt-links div").animate({"margin-top": "0.3rem"}, 300);
+}, 200));
+
+
+
+//**//
+$(()=>{
+    $('#top-icon').on('click',  function(){
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        })
+    })
+})
 
 /************************************SKILLS*************************************/
 let skillContainer = document.getElementById("skills-container");
