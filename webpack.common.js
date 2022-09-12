@@ -4,7 +4,7 @@ const { ProvidePlugin } = require('webpack');
 const jquery = require('jquery');
 
 module.exports = {
-  entry: path.resolve(__dirname, './src/index.js'),
+  entry: path.resolve(__dirname, './src/main.js'),
   output: {
     path: path.resolve(__dirname, './dist'),
     filename: 'bundle.js',
