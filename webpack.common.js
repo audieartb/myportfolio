@@ -6,7 +6,7 @@ const jquery = require('jquery');
 module.exports = {
   entry: path.resolve(__dirname, './src/main.js'),
   output: {
-    path: path.resolve(__dirname, './dist'),
+    path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
     clean: true,
   },
@@ -35,11 +35,11 @@ module.exports = {
     extensions: ['*', '.js']
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      template: './src/index.html',
-      filename: 'index.html',
-      inject: 'body',
-    }),
+    // new HtmlWebpackPlugin({
+    //   template: './index.html',
+    //   filename: 'index.html',
+    //   inject: 'body',
+    // }),
     new ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery'
