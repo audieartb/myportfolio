@@ -35,11 +35,11 @@ module.exports = {
     extensions: ['*', '.js']
   },
   plugins: [
-    // new HtmlWebpackPlugin({
-    //   template: './index.html',
-    //   filename: 'index.html',
-    //   inject: 'body',
-    // }),
+    new HtmlWebpackPlugin({
+      template: './index.html',
+      filename: 'index.html',
+      inject: 'body',
+    }),
     new ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery'
