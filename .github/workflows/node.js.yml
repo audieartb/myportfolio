@@ -26,8 +26,8 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-        script: |
-          cd /home/audie/portfolio/html/myportfolio
-          git pull
-          npm run build
+    - name: Install dependencies
+      run: npm ci
+      run: npm run build
+
     
