@@ -28,5 +28,19 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: npm run build
+  
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy app
+        uses: appleboy/ssh-action@v0.1.2
+        with:
+          host: ${{secrets.SSH_HOST}}
+          key: ${{secrets.SSH_KEY}}
+          username: ${{secrets.SSH_USERNAME}}
 
+          script: |
+            cd portfolio/html/myportfolio
+            git pull
+            npm run build
     
