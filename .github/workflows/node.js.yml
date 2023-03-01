@@ -39,12 +39,13 @@ jobs:
           SSH_KEY: ${{secrets.SSH_KEY}}
           SSH_USER: ${{secrets.SSH_USERNAME}}
         uses: appleboy/ssh-action@v0.1.4
+        run: echo '$SSH_HOST'
         with:
           host: ${{env.SSH_HOST}}
           key: ${{env.SSH_KEY}}
           username: ${{env.SSH_USER}}
           port: 22
-          run: echo '$SSH_HOST'
+          
           script: |
             echo "running scripts"
             cd portfolio/html/myportfolio
