@@ -31,8 +31,9 @@ jobs:
   
   deploy:
     runs-on: ubuntu-latest
+    needs: [build]
     steps:
-      - name: Deploy app
+      - name: Deploy NodeJs app
         uses: appleboy/ssh-action@v0.1.2
         with:
           host: ${{secrets.SSH_HOST}}
@@ -43,4 +44,3 @@ jobs:
             cd portfolio/html/myportfolio
             git pull
             npm run build
-    
