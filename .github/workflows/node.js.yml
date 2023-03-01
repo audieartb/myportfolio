@@ -44,6 +44,7 @@ jobs:
           key: ${{env.SSH_KEY}}
           username: ${{env.SSH_USER}}
           port: 22
+          run: echo '$SSH_HOST'
           script: |
             echo "running scripts"
             cd portfolio/html/myportfolio
