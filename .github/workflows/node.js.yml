@@ -26,8 +26,8 @@ jobs:
       #with:
         #node-version: ${{ matrix.node-version }}
         #cache: 'npm'
-    - run: npm ci
-    - run: npm run build
+    #- run: npm ci
+    #- run: npm run build
   
   deploy:
     runs-on: ubuntu-latest
